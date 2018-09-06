@@ -1,0 +1,109 @@
+\documentclass[12pt,spanish]{article}
+
+\usepackage[utf8x]{inputenc}
+%\pagenumbering{roman}
+\usepackage[spanish]{babel}
+\usepackage{lipsum} % Package to generate dummy text
+\usepackage{times} % Times New Roman font
+\usepackage{wasysym} % Includes mars and venus symbols
+\usepackage[margin=2.5cm]{geometry} % Margins
+\linespread{1.5} % Line spacing
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx} % Required for including pictures
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+\usepackage{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\bibliographystyle{apalike}
+\usepackage{textcomp} % Allows many text symbols (such as baht, bullet, copyright, musical note, onequarter, section, and yen)
+%\usepackage{fixltx2e} % This package does nothing other than issue a warning in current LaTeX Releases
+
+\usepackage{hyperref} % Allows hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+\urlstyle{same}
+
+\graphicspath{{figuras/}} % Specifies the directory where pictures are stored
+
+
+\begin{document}
+
+%---------------------------------------------------------------------------------
+%	TITLE PAGE
+%---------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\begin{center}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.25]{01-unam.png}
+\end{figure}
+
+\textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}\\
+DOCTORADO EN CIENCIAS BIOMÉDICAS\\
+INSTITUTO DE NEUROBIOLOGÍA (INB)\\[0.70cm]
+
+DESARROLLO DE LA CONECTIVIDAD FUNCIONAL CEREBRAL EN LA ADOLESCENCIA Y SU CORRELATO CON EL DESEMPEÑO COGNITIVO\\[0.70cm]
+
+PARA OPTAR POR EL GRADO DE:\\
+DOCTOR EN CIENCIAS\\[0.70cm]
+
+PRESENTA:\\
+ZEUS GRACIA TABUENCA\\[0.70cm]
+
+TUTOR:\\
+DR. SARAEL ALCAUTER SOLÓRZANO\\
+DEPTO. DE NEUROBIOLOGÍA CONDUCTUAL Y COGNITIVA\\
+INSTITUTO DE NEUROBIOLOGÍA (UNAM)\\[0.70cm]
+
+MIEMBROS DEL COMITÉ TUTOR:\\
+DR. LUIS CONCHA LOYOLA\\
+DEPTO. DE NEUROBIOLOGÍA CONDUCTUAL Y COGNITIVA\\
+INSTITUTO DE NEUROBIOLOGÍA (UNAM)\\[0.50cm]
+
+DRA. ALEJANDRA EVELYN RUIZ CONTRERAS\\
+DEPTO. DE FISIOLOGÍA\\
+FACULTAD DE MEDICINA (UNAM)\\[0.70cm]
+
+MÉXICO, SEPTIEMBRE DE 2018
+\end{center}
+
+\end{titlepage}
+
+%------------------------------------------------------------------------------------
+%	ÍNDICE
+%------------------------------------------------------------------------------------
+\newpage
+\tableofcontents % Include a table of contents
+
+%---------------------------------------------------------------------------------
+%	RESUMENES
+%---------------------------------------------------------------------------------
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section
+\section{Introducción}
+
+\lipsum[1-1]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section
+\section{Antecedentes}
+
+\lipsum[2-4] \citep{gracia2016asi}
+
+%--------------------------------------------------------------------------------
+%	REFERENCIAS
+%--------------------------------------------------------------------------------
+\newpage
+%\addcontentsline{toc}{section}{Referencias}
+\bibliography{biblio}
+
+
+\end{document}
